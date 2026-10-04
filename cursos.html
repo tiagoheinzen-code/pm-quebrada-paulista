@@ -39,17 +39,14 @@ a.card:hover{border-color:var(--acc);transform:translateY(-1px)}
 // Deixe "" (vazio) enquanto o curso não tiver link: o card aparece como "Link em breve".
 // Para adicionar um curso, copie uma linha { ... }, e cuide da vírgula no final.
 const CURSOS = [
-  { grupo: "Cursos básicos · obrigatórios em até 15 dias",
-    nome: "P.O.P.", desc: "Procedimento Operacional Padrão", link: "https://canva.link/adrpvuyded4fusj" },
-  { grupo: "Cursos básicos · obrigatórios em até 15 dias",
-    nome: "Modulação e BOPM", desc: "Comunicação via rádio e registro do boletim de ocorrência", link: "https://canva.link/sf3ig31hk95y6qi" },
-  { grupo: "Cursos básicos · obrigatórios em até 15 dias",
-    nome: "Abordagem e Posicionamento", desc: "Inclui prova prática (simulação de abordagem)", link: "https://canva.link/xyih7c6ed70cg9p" },
-  { grupo: "Cursos básicos · obrigatórios em até 15 dias",
-    nome: "Procedimento de Socorro", desc: "Atendimento e socorro em ocorrências", link: "https://canva.link/7dm8mfx6d61t4aq" },
-  // Desativado por enquanto: apague as duas barras "//" das 2 linhas abaixo para mostrar.
-  // { grupo: "Unidades especializadas",
-  //   nome: "Conduta em Perseguição e Uso de Aeronave", desc: "Obrigatório para policiais de unidades especializadas", link: "" },
+  { grupo: "Cursos disponíveis",
+    nome: "Tiro Básico", desc: "", link: "https://canva.link/adrpvuyded4fusj" },
+  { grupo: "Cursos disponíveis",
+    nome: "Tiro Avançado", desc: "", link: "https://canva.link/xyih7c6ed70cg9p" },
+  { grupo: "Cursos disponíveis",
+    nome: "Abordagem e Posicionamento", desc: "Inclui prova prática (simulação de abordagem)", link: "https://canva.link/sf3ig31hk95y6qi" },
+  { grupo: "Cursos disponíveis",
+    nome: "SAT B", desc: "", link: "https://canva.link/7dm8mfx6d61t4aq" },
 ];
 // ===== FIM =====
 
@@ -68,7 +65,9 @@ for (const c of CURSOS) {
   const b = document.createElement("b"); b.textContent = c.nome;
   const d = document.createElement("span"); d.className = "d"; d.textContent = c.desc;
   const v = document.createElement("span"); v.className = "v"; v.textContent = c.link ? "Abrir no Canva ↗" : "Link em breve";
-  card.append(b, d, v);
+  card.append(b);
+  if (c.desc) card.append(d);
+  card.append(v);
   lista.appendChild(card);
 }
 </script>
