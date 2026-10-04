@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Polícia Militar · Quebrada Paulista RP</title>
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet"><meta name="description" content="Documentos oficiais e cursos da PM da Quebrada Paulista Roleplay: RDPM, Regras Gerais e Cursos."><meta property="og:type" content="website"><meta property="og:site_name" content="Polícia Militar · Quebrada Paulista RP"><meta property="og:title" content="Polícia Militar · Quebrada Paulista RP"><meta property="og:description" content="Documentos oficiais e cursos da PM da Quebrada Paulista Roleplay: RDPM, Regras Gerais e Cursos."><meta property="og:url" content="https://pm-quebrada-paulista.vercel.app/"><meta property="og:image" content="https://pm-quebrada-paulista.vercel.app/og.jpg"><meta property="og:image:width" content="1400"><meta property="og:image:height" content="260"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0e0c16">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet"><meta name="description" content="Documentos oficiais e cursos da PM da Quebrada Paulista Roleplay: RDPM, Regras Gerais e Cursos."><meta property="og:type" content="website"><meta property="og:site_name" content="Polícia Militar · Quebrada Paulista RP"><meta property="og:title" content="Polícia Militar · Quebrada Paulista RP"><meta property="og:description" content="Documentos oficiais e cursos da PM da Quebrada Paulista Roleplay: RDPM, Regras Gerais e Cursos."><meta property="og:url" content="https://pm-quebrada-paulista.vercel.app/"><meta property="og:image" content="https://pm-quebrada-paulista.vercel.app/og-v2.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0e0c16">
 <style>
 :root{--bg:#0e0c16;--fg:#efedf6;--mut:#a29db6;--line:#2a2540;--card:#17142a;--ico:rgba(139,92,246,.16);--acc:#a78bfa;--acc2:#7c4dff;--red:#e03343;--sombra:0 14px 34px rgba(0,0,0,.5);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box}
@@ -136,7 +136,7 @@ footer{background:#060a14;border-top:1px solid var(--line);padding:26px 20px 34p
 footer .marca{display:inline-flex;align-items:center;gap:10px;font-weight:700;color:var(--fg);letter-spacing:.04em}
 footer img{width:34px;height:34px}
 footer p{margin:6px 0 0}
-</style></head><body>
+</style><script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script><script defer src="/_vercel/insights/script.js"></script></head><body>
 <nav class="nav" id="nav"><div class="in"><a class="marca" href="/"><img src="icon-512.png" alt=""><span>Polícia Militar<small>QUEBRADA PAULISTA</small></span></a><div class="links"><a class="ativo" aria-current="page" href="/">Início</a><a href="/rdpm">RDPM</a><a href="/regras-gerais">Regras Gerais</a><a href="/cursos">Cursos</a><a href="/#galeria">Galeria</a><a href="/#videos">Vídeos</a></div></div></nav>
 
 <section class="hero">
@@ -154,8 +154,8 @@ footer p{margin:6px 0 0}
   </div>
 </section>
 <div class="numeros"><div class="in">
-  <div class="num"><b>2</b><span>Documentos<br>oficiais</span></div>
-  <div class="num"><b>4</b><span>Cursos<br>disponíveis</span></div>
+  <div class="num"><b id="nDocs">–</b><span>Documentos<br>oficiais</span></div>
+  <div class="num"><b id="nCursos">–</b><span>Cursos<br>disponíveis</span></div>
   <div class="num"><b id="nFotos">–</b><span>Fotos na<br>galeria</span></div>
   <div class="num"><b id="nVideos">–</b><span>Vídeos de<br>operação</span></div>
 </div></div>
@@ -217,6 +217,7 @@ footer p{margin:6px 0 0}
   <button class="prox" type="button" aria-label="Próxima foto">›</button>
 </dialog>
 
+<script src="cursos-lista.js"></script>
 <script>
 // ===== GALERIA: para adicionar uma foto, coloque NN.jpg (grande) e NN-p.jpg (miniatura) na pasta galeria/ e acrescente uma linha aqui =====
 const FOTOS = [
@@ -308,6 +309,8 @@ let atual = 0;
 document.getElementById("qtd").textContent = FOTOS.length + " fotos";
 document.getElementById("nFotos").textContent = FOTOS.length;
 document.getElementById("nVideos").textContent = VIDEOS.length;
+document.getElementById("nDocs").textContent = document.querySelectorAll('.grade a.card:not([href="/cursos"])').length;
+document.getElementById("nCursos").textContent = (window.CURSOS || []).filter(c => c.link).length;
 // ===== CARROSSEL DA ABERTURA: números das fotos da pasta galeria/ que passam no fundo =====
 const CARROSSEL = ["01", "35", "55", "23", "28", "41", "03", "48"];
 (function () {

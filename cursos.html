@@ -3,7 +3,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Cursos · Polícia Militar · Quebrada Paulista RP</title>
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet"><meta name="description" content="Material dos cursos da PM da Quebrada Paulista Roleplay."><meta property="og:type" content="website"><meta property="og:site_name" content="Polícia Militar · Quebrada Paulista RP"><meta property="og:title" content="Cursos · Polícia Militar · Quebrada Paulista RP"><meta property="og:description" content="Material dos cursos da PM da Quebrada Paulista Roleplay."><meta property="og:url" content="https://pm-quebrada-paulista.vercel.app/cursos"><meta property="og:image" content="https://pm-quebrada-paulista.vercel.app/og.jpg"><meta property="og:image:width" content="1400"><meta property="og:image:height" content="260"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0e0c16">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Oswald:wght@500;600;700&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet"><meta name="description" content="Material dos cursos da PM da Quebrada Paulista Roleplay."><meta property="og:type" content="website"><meta property="og:site_name" content="Polícia Militar · Quebrada Paulista RP"><meta property="og:title" content="Cursos · Polícia Militar · Quebrada Paulista RP"><meta property="og:description" content="Material dos cursos da PM da Quebrada Paulista Roleplay."><meta property="og:url" content="https://pm-quebrada-paulista.vercel.app/cursos"><meta property="og:image" content="https://pm-quebrada-paulista.vercel.app/og-v2.jpg"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0e0c16">
 <style>
 :root{--bg:#0e0c16;--fg:#efedf6;--mut:#a29db6;--line:#2a2540;--card:#17142a;--acc:#a78bfa;--acc2:#7c4dff;--red:#e03343;color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box}
@@ -42,7 +42,7 @@ a.card:hover{border-color:var(--acc);transform:translateY(-1px)}
 .card.off b,.card.off .v{color:var(--mut)}
 .nota{margin-top:30px;color:var(--mut);font-size:.9rem;text-align:center}
 .nota a{color:var(--acc)}
-</style></head><body>
+</style><script>window.va=window.va||function(){(window.vaq=window.vaq||[]).push(arguments)};</script><script defer src="/_vercel/insights/script.js"></script></head><body>
 <nav class="nav" id="nav"><div class="in"><a class="marca" href="/"><img src="icon-512.png" alt=""><span>Polícia Militar<small>QUEBRADA PAULISTA</small></span></a><div class="links"><a href="/">Início</a><a href="/rdpm">RDPM</a><a href="/regras-gerais">Regras Gerais</a><a class="ativo" aria-current="page" href="/cursos">Cursos</a><a href="/#galeria">Galeria</a><a href="/#videos">Vídeos</a></div></div></nav>
 <section class="hero"><div class="in">
 <a class="voltar" href="/">← Voltar ao início</a>
@@ -53,24 +53,9 @@ a.card:hover{border-color:var(--acc);transform:translateY(-1px)}
 <main>
 <div id="lista"></div>
 <p class="nota">Dúvidas sobre os cursos: abra um ticket com o QCG.</p>
+<script src="cursos-lista.js"></script>
 <script>
-// ===== EDITE AQUI =====
-// Para cada curso, cole o link do Canva entre as aspas de "link".
-// No Canva: Compartilhar → "Link de visualização" (ou "Ver só") → Copiar.
-// Deixe "" (vazio) enquanto o curso não tiver link: o card aparece como "Link em breve".
-// Para adicionar um curso, copie uma linha { ... }, e cuide da vírgula no final.
-const CURSOS = [
-  { grupo: "Cursos disponíveis",
-    nome: "Tiro Básico", desc: "Manuseio de armamento de baixo e médio calibre", link: "https://canva.link/adrpvuyded4fusj" },
-  { grupo: "Cursos disponíveis",
-    nome: "Tiro Avançado", desc: "Manuseio de armamento de calibre avançado", link: "https://canva.link/xyih7c6ed70cg9p" },
-  { grupo: "Cursos disponíveis",
-    nome: "Abordagem e Posicionamento", desc: "Inclui prova prática (simulação de abordagem)", link: "https://canva.link/sf3ig31hk95y6qi" },
-  { grupo: "Cursos disponíveis",
-    nome: "SAT B", desc: "Curso de direção policial: condução e familiarização com a viatura", link: "https://canva.link/7dm8mfx6d61t4aq" },
-];
-// ===== FIM =====
-
+// A lista de cursos fica no arquivo cursos-lista.js
 const lista = document.getElementById("lista");
 let grupoAtual = null;
 for (const c of CURSOS) {
