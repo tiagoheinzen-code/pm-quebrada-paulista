@@ -80,7 +80,7 @@ a.card:hover .ir{transform:translateX(3px)}
 .videos h2{margin:2px 0 10px;font-size:clamp(1.4rem,3vw,1.8rem);font-weight:800;line-height:1.15}
 .vgrade{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(320px,100%),1fr));gap:18px;margin-top:22px}
 .vgrade figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
-.vgrade video{display:block;width:100%;aspect-ratio:16/9;background:#000}
+.vgrade video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#000}
 .vgrade figcaption{padding:12px 16px;font-weight:600;font-size:.95rem}
 @media (max-width:640px){.videos{scroll-margin-top:125px}}
 
@@ -206,7 +206,7 @@ const FOTOS = [
 
 // ===== VÍDEOS: coloque o .mp4 na pasta videos/ e acrescente uma linha aqui. Com a lista vazia, a seção fica escondida. =====
 const VIDEOS = [
-  // ["patrulha-noturna.mp4", "Patrulha noturna do Choque"],
+  ["video-01.mp4", "PM em operação"],
 ];
 // ===== FIM =====
 
