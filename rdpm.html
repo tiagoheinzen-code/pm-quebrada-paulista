@@ -22,7 +22,7 @@ table{border-collapse:collapse;width:100%;font-size:.92rem;margin:.6em 0}
 th,td{border:1px solid var(--line);padding:6px 8px;text-align:left;vertical-align:top}
 th{background:var(--th)}
 p{margin:.6em 0}
-</style></head><body><header class="capa hero" style="background-image:url(galeria/09.jpg)"><div class="in"><a class="voltar" href="/">&larr; Voltar ao início</a><span class="kicker"><span class="bandeira"><i></i><i></i><i></i></span>Documento oficial · Minuta v1.14</span><span class="titulo">RDPM</span></div></header><nav class="qp-nav"><a class="qp-marca" href="/"><img src="icon-512.png" alt=""><span>Polícia Militar<small>QUEBRADA PAULISTA</small></span></a><div class="lk"><a href="/">Início</a><a href="/rdpm" class="atual" aria-current="page">RDPM</a><a href="/regras-gerais">Regras Gerais</a><a href="/cursos">Cursos</a><a href="/#galeria">Galeria</a></div><div class="qp-busca"><input id="qp-q" type="search" placeholder="Buscar no RDPM (ex.: viatura, preso)…" aria-label="Buscar no documento"><span class="cont" id="qp-cont"></span><button id="qp-ant" type="button" title="Anterior">▲</button><button id="qp-prox" type="button" title="Próximo">▼</button></div></nav><main>
+</style></head><body><nav class="nav" id="nav"><div class="in"><a class="marca" href="/"><img src="icon-512.png" alt=""><span>Polícia Militar<small>QUEBRADA PAULISTA</small></span></a><div class="links"><a href="/">Início</a><a class="ativo" aria-current="page" href="/rdpm">RDPM</a><a href="/regras-gerais">Regras Gerais</a><a href="/cursos">Cursos</a><a href="/#galeria">Galeria</a><a href="/#videos">Vídeos</a></div></div></nav><header class="capa hero" style="background-image:url(galeria/09.jpg)"><div class="in"><a class="voltar" href="/">&larr; Voltar ao início</a><span class="kicker"><span class="bandeira"><i></i><i></i><i></i></span>Documento oficial · Minuta v1.14</span><span class="titulo">RDPM</span></div></header><div class="qp-nav qp-barra"><div class="qp-busca"><input id="qp-q" type="search" placeholder="Buscar no RDPM (ex.: viatura, preso)…" aria-label="Buscar no documento"><span class="cont" id="qp-cont"></span><button id="qp-ant" type="button" title="Anterior">▲</button><button id="qp-prox" type="button" title="Próximo">▼</button></div></div><main>
 
 <h1>REGULAMENTO DISCIPLINAR DA POLÍCIA MILITAR</h1>
 <p><strong>Quebrada Paulista Roleplay</strong> · Minuta v1.14 (proposta da Staff) · Vigência prevista: WIPE de 05/10</p>
@@ -1017,9 +1017,25 @@ h2:hover .qp-ancora,h3:hover .qp-ancora,.qp-ancora:focus{opacity:.8}
 <style id="qp-tema">
 :root:not(#qp){--bg:#0e0c16;--fg:#efedf6;--mut:#a29db6;--line:#2a2540;--th:#1d1932;--card:#17142a;--acc:#a78bfa;--acc2:#7c4dff;--red:#e03343;color-scheme:dark}
 body{background:var(--bg)}
+.nav,.nav *{box-sizing:border-box}
+.nav{position:fixed;inset:env(safe-area-inset-top,0px) 0 auto 0;z-index:30;font:17px/1.6 "Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;background:linear-gradient(180deg,rgba(14,12,22,.85),rgba(14,12,22,.35));-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08);transition:background .2s}
+.nav.solida{background:rgba(14,12,22,.94)}
+.nav .in{max-width:1080px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:18px;height:64px}
+.nav .marca{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;white-space:nowrap}
+.nav .marca img{width:36px;height:36px}
+.nav .marca span{font-family:"Oswald",sans-serif;font-weight:600;font-size:1.05rem;letter-spacing:.06em;text-transform:uppercase;line-height:1.1}
+.nav .marca small{display:block;font-family:"Source Sans 3",sans-serif;font-size:.66rem;font-weight:700;letter-spacing:.22em;color:#a78bfa}
+.nav .links{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav .links::-webkit-scrollbar{display:none}
+.nav .links a{position:relative;color:#d9d5e8;text-decoration:none;font-weight:600;font-size:.95rem;padding:8px 12px;white-space:nowrap;transition:color .15s}
+.nav .links a::after{content:"";position:absolute;left:12px;right:12px;bottom:2px;height:2px;border-radius:2px;background:#7c4dff;transform:scaleX(0);transition:transform .2s}
+.nav .links a:hover{color:#fff}
+.nav .links a:hover::after,.nav .links a.ativo::after{transform:scaleX(1)}
+.nav .links a.ativo{color:#fff}
+@media (max-width:640px){.nav .in{height:auto;padding:10px 16px 4px;flex-wrap:wrap;gap:4px}.nav .links{margin-left:-10px;width:calc(100% + 10px)}.nav .links a{padding:6px 10px;font-size:.9rem}}
 .hero{position:relative;border-bottom:1px solid var(--line);background-color:#000;background-size:cover;background-position:50% 45%}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg) 0%,rgba(14,12,22,.85) 45%,rgba(14,12,22,.55) 100%)}
-.hero .in{position:relative;z-index:1;max-width:820px;margin:0 auto;padding:60px 18px 30px}
+.hero .in{position:relative;z-index:1;max-width:820px;margin:0 auto;padding:110px 18px 30px}
 .hero .voltar{display:inline-block;color:var(--acc);text-decoration:none;font-weight:600;font-size:.95rem;margin:0 0 12px}
 .hero .voltar:hover{text-decoration:underline}
 .hero .kicker{display:flex;align-items:center;gap:12px;color:#e4def7;font-size:.78rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase}
@@ -1028,19 +1044,12 @@ body{background:var(--bg)}
 .hero .bandeira i:nth-child(2){background:#fff;width:10px}
 .hero .bandeira i:nth-child(3){background:#111;outline:1px solid rgba(255,255,255,.3);width:10px}
 .hero .titulo{display:block;margin:10px 0 0;font:700 clamp(2.4rem,7vw,3.6rem)/1 "Oswald","Source Sans 3",sans-serif;text-transform:uppercase;color:#fff}
-.qp-nav{background:rgba(14,12,22,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid rgba(255,255,255,.08);padding:10px 20px}
-.qp-marca{display:flex;align-items:center;gap:10px;text-decoration:none;color:#fff;white-space:nowrap}
-.qp-marca img{width:34px;height:34px}
-.qp-marca span{font:600 1rem/1.1 "Oswald",sans-serif;letter-spacing:.06em;text-transform:uppercase}
-.qp-marca small{display:block;font:700 .64rem "Source Sans 3",sans-serif;letter-spacing:.22em;color:var(--acc)}
-.qp-nav .lk a{position:relative;color:#d9d5e8;opacity:1;border-radius:0;padding:6px 10px}
-.qp-nav .lk a::after{content:"";position:absolute;left:10px;right:10px;bottom:0;height:2px;border-radius:2px;background:var(--acc2);transform:scaleX(0);transition:transform .2s}
-.qp-nav .lk a:hover{background:none;color:#fff}
-.qp-nav .lk a:hover::after,.qp-nav .lk a.atual::after{transform:scaleX(1)}
-.qp-nav .lk a.atual{background:none;color:#fff}
+.qp-barra.qp-nav{top:calc(64px + env(safe-area-inset-top,0px));z-index:20;justify-content:center;padding:10px 18px;background:rgba(23,20,42,.94);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.qp-barra .qp-busca{max-width:784px;flex:1 1 auto}
 .qp-busca input{background:var(--th);border-color:var(--line);border-radius:999px;padding:7px 14px}
 .qp-busca input:focus{outline-color:var(--acc2)}
 .qp-busca button{border-radius:50%}
+main h2,main h3{scroll-margin-top:140px}
 main h1{text-align:left;color:#fff;font:700 clamp(1.5rem,4vw,2.1rem)/1.1 "Oswald","Source Sans 3",sans-serif;text-transform:uppercase;letter-spacing:.01em;margin:.2em 0 .3em}
 main h2{font:600 1.3rem/1.2 "Oswald","Source Sans 3",sans-serif;text-transform:uppercase;letter-spacing:.02em;color:#fff;border-bottom:0;border-left:4px solid var(--acc2);padding:2px 0 2px 12px}
 main h3{color:var(--acc)}
@@ -1050,4 +1059,6 @@ th{color:#fff}
 #sumario{background:var(--card);border-color:var(--line)}
 #sumario a.ativo{color:var(--acc)}
 #sumario-btn,.qp-toast{background:var(--acc2);color:#fff}
-</style></body></html>
+@media (max-width:640px){.qp-barra.qp-nav{top:calc(92px + env(safe-area-inset-top,0px))}.hero .in{padding-top:120px}main h2,main h3{scroll-margin-top:170px}}
+@media print{.nav,.qp-barra{display:none!important}}
+</style><script id="qp-nav-js">(function(){var n=document.getElementById("nav");function f(){n.classList.toggle("solida",window.scrollY>120)}window.addEventListener("scroll",f,{passive:true});f();})();</script></body></html>
