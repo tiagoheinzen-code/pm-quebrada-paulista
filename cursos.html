@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR"><head><meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Cursos · Polícia Militar · Quebrada Paulista RP</title>
+<link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet"><meta name="description" content="Material dos cursos da PM da Quebrada Paulista Roleplay."><meta property="og:type" content="website"><meta property="og:site_name" content="Polícia Militar · Quebrada Paulista RP"><meta property="og:title" content="Cursos · Polícia Militar · Quebrada Paulista RP"><meta property="og:description" content="Material dos cursos da PM da Quebrada Paulista Roleplay."><meta property="og:url" content="https://pm-quebrada-paulista.vercel.app/cursos"><meta property="og:image" content="https://pm-quebrada-paulista.vercel.app/og.jpg"><meta property="og:image:width" content="1400"><meta property="og:image:height" content="260"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#5b34c9">
+<style>
+:root{--bg:#fff;--fg:#1a1a1a;--mut:#555;--line:#ddd8ea;--card:#f7f5fc;--acc:#5b34c9;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root{--bg:#14121b;--fg:#ececf1;--mut:#a9a6b8;--line:#2f2a42;--card:#1d1928;--acc:#a78bfa}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 "Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+.capa{width:100%;background:#141414;overflow:hidden}
+.capa img{display:block;width:100%;height:auto;min-height:140px;max-height:360px;object-fit:cover;object-position:left center}
+main{max-width:720px;margin:0 auto;padding:28px 18px 64px}
+.voltar{display:inline-block;color:var(--acc);text-decoration:none;font-weight:600;font-size:.95rem;margin:0 0 18px}
+.voltar:hover{text-decoration:underline}
+h1{margin:0 0 4px;font-size:1.7rem;font-weight:800}
+.sub{color:var(--mut);margin:0 0 26px;font-size:.95rem}
+h2{margin:30px 0 12px;font-size:.85rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--mut)}
+.card{display:block;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);border-left:5px solid var(--acc);border-radius:10px;padding:16px 18px;margin:0 0 14px;transition:transform .12s,border-color .12s}
+a.card:hover{border-color:var(--acc);transform:translateY(-1px)}
+.card b{color:var(--acc);font-size:1.15rem;font-weight:700}
+.card .d{display:block;color:var(--mut);font-size:.95rem}
+.card .v{display:inline-block;margin-top:8px;font-size:.8rem;font-weight:600;color:var(--acc);border:1px solid var(--line);border-radius:999px;padding:1px 10px}
+.card.off{border-left-color:var(--line);opacity:.7}
+.card.off b,.card.off .v{color:var(--mut)}
+.nota{margin-top:30px;color:var(--mut);font-size:.9rem;text-align:center}
+.nota a{color:var(--acc)}
+</style></head><body><header class="capa"><img src="banner.jpg" alt="Quebrada Paulista Roleplay – Polícia Militar"></header><main>
+<a class="voltar" href="/">← Voltar aos documentos</a>
+<h1>Cursos da PM</h1>
+<p class="sub">Material de estudo dos cursos. Todo curso termina com prova; consulte o item 1 das <a href="/regras-gerais" style="color:var(--acc)">Regras Gerais</a>.</p>
+<div id="lista"></div>
+<p class="nota">Dúvidas sobre os cursos: abra um ticket com o QCG.</p>
+<script>
+// ===== EDITE AQUI =====
+// Para cada curso, cole o link do Canva entre as aspas de "link".
+// No Canva: Compartilhar → "Link de visualização" (ou "Ver só") → Copiar.
+// Deixe "" (vazio) enquanto o curso não tiver link: o card aparece como "Link em breve".
+// Para adicionar um curso, copie uma linha { ... }, e cuide da vírgula no final.
+const CURSOS = [
+  { grupo: "Cursos básicos · obrigatórios em até 15 dias",
+    nome: "P.O.P.", desc: "Procedimento Operacional Padrão", link: "" },
+  { grupo: "Cursos básicos · obrigatórios em até 15 dias",
+    nome: "Modulação e BOPM", desc: "Comunicação via rádio e registro do boletim de ocorrência", link: "" },
+  { grupo: "Cursos básicos · obrigatórios em até 15 dias",
+    nome: "Abordagem e Posicionamento", desc: "Inclui prova prática (simulação de abordagem)", link: "" },
+  { grupo: "Cursos básicos · obrigatórios em até 15 dias",
+    nome: "Procedimento de Socorro", desc: "Atendimento e socorro em ocorrências", link: "" },
+  { grupo: "Unidades especializadas",
+    nome: "Conduta em Perseguição e Uso de Aeronave", desc: "Obrigatório para policiais de unidades especializadas", link: "" },
+];
+// ===== FIM =====
+
+const lista = document.getElementById("lista");
+let grupoAtual = null;
+for (const c of CURSOS) {
+  if (c.grupo !== grupoAtual) {
+    grupoAtual = c.grupo;
+    const h = document.createElement("h2");
+    h.textContent = c.grupo;
+    lista.appendChild(h);
+  }
+  const card = document.createElement(c.link ? "a" : "div");
+  card.className = c.link ? "card" : "card off";
+  if (c.link) { card.href = c.link; card.target = "_blank"; card.rel = "noopener"; }
+  const b = document.createElement("b"); b.textContent = c.nome;
+  const d = document.createElement("span"); d.className = "d"; d.textContent = c.desc;
+  const v = document.createElement("span"); v.className = "v"; v.textContent = c.link ? "Abrir no Canva ↗" : "Link em breve";
+  card.append(b, d, v);
+  lista.appendChild(card);
+}
+</script>
+</main></body></html>
