@@ -27,7 +27,15 @@ main{max-width:1080px;margin:0 auto;padding:56px 20px 56px}
 .nav .links a.ativo{color:#fff}
 @media (max-width:640px){.nav .in{height:auto;padding:10px 16px 4px;flex-wrap:wrap;gap:4px}.nav .links{margin-left:-10px;width:calc(100% + 10px)}.nav .links a{padding:6px 10px;font-size:.9rem}}
 
-.hero{position:relative;min-height:min(86vh,720px);display:flex;align-items:flex-end;background:#000 url(galeria/01.jpg) 50% 45%/cover}
+.hero{position:relative;overflow:hidden;min-height:min(86vh,720px);display:flex;align-items:flex-end;background:#000}
+.slides{position:absolute;inset:0}
+.slides div{position:absolute;inset:0;background:50% 45%/cover no-repeat;opacity:0;transform:scale(1.06);transition:opacity 1.4s ease,transform 7s linear}
+.slides div.on{opacity:1;transform:scale(1)}
+.pontos{position:absolute;z-index:2;right:20px;bottom:22px;display:flex;gap:8px}
+.pontos button{width:10px;height:10px;padding:0;border-radius:999px;border:0;background:rgba(255,255,255,.35);cursor:pointer;transition:width .3s,background .3s}
+.pontos button.on{width:28px;background:var(--acc2)}
+@media (prefers-reduced-motion:reduce){.slides div{transition:opacity .4s;transform:none}}
+@media (max-width:640px){.pontos{right:auto;left:20px;bottom:14px}}
 .hero::after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,var(--bg) 0%,rgba(14,12,22,.82) 30%,rgba(14,12,22,.25) 65%,rgba(14,12,22,.55) 100%),linear-gradient(90deg,rgba(14,12,22,.7),transparent 70%)}
 .hero .in{position:relative;z-index:1;width:100%;max-width:1080px;margin:0 auto;padding:140px 20px 56px}
 .rotulo{display:flex;align-items:center;gap:12px;font-size:.78rem;font-weight:700;letter-spacing:.24em;text-transform:uppercase;color:#e4def7}
@@ -132,6 +140,8 @@ footer p{margin:6px 0 0}
 <nav class="nav" id="nav"><div class="in"><a class="marca" href="/"><img src="icon-512.png" alt=""><span>Polícia Militar<small>QUEBRADA PAULISTA</small></span></a><div class="links"><a class="ativo" aria-current="page" href="/">Início</a><a href="/rdpm">RDPM</a><a href="/regras-gerais">Regras Gerais</a><a href="/cursos">Cursos</a><a href="/#galeria">Galeria</a><a href="/#videos">Vídeos</a></div></div></nav>
 
 <section class="hero">
+  <div class="slides" id="slides"></div>
+  <div class="pontos" id="pontos"></div>
   <div class="in">
       <span class="rotulo"><span class="bandeira"><i></i><i></i><i></i></span>Quebrada Paulista Roleplay · Vigência no WIPE 05/10</span>
       <h1>Ordem nas ruas.<br><span>Respeito</span> na quebrada.</h1>
@@ -298,6 +308,33 @@ let atual = 0;
 document.getElementById("qtd").textContent = FOTOS.length + " fotos";
 document.getElementById("nFotos").textContent = FOTOS.length;
 document.getElementById("nVideos").textContent = VIDEOS.length;
+// ===== CARROSSEL DA ABERTURA: números das fotos da pasta galeria/ que passam no fundo =====
+const CARROSSEL = ["01", "35", "55", "23", "28", "41", "03", "48"];
+(function () {
+  const caixa = document.getElementById("slides"), pontos = document.getElementById("pontos");
+  const slides = CARROSSEL.map((n, i) => {
+    const d = document.createElement("div");
+    d.dataset.src = "galeria/" + n + ".jpg";
+    caixa.appendChild(d);
+    const b = document.createElement("button");
+    b.type = "button"; b.setAttribute("aria-label", "Foto " + (i + 1));
+    b.addEventListener("click", () => { mostra(i); reinicia(); });
+    pontos.appendChild(b);
+    return d;
+  });
+  const carrega = i => { const d = slides[i]; if (d && !d.style.backgroundImage) d.style.backgroundImage = "url(" + d.dataset.src + ")"; };
+  let atual = -1, timer;
+  function mostra(i) {
+    i = (i + slides.length) % slides.length;
+    carrega(i); carrega(i + 1);
+    slides.forEach((d, j) => d.classList.toggle("on", j === i));
+    [...pontos.children].forEach((b, j) => b.classList.toggle("on", j === i));
+    atual = i;
+  }
+  function reinicia() { clearInterval(timer); timer = setInterval(() => { if (!document.hidden) mostra(atual + 1); }, 6000); }
+  mostra(0); reinicia();
+})();
+
 const nav = document.getElementById("nav");
 const ajustaNav = () => nav.classList.toggle("solida", window.scrollY > 120);
 window.addEventListener("scroll", ajustaNav, { passive: true });
