@@ -3,34 +3,65 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Polícia Militar · Quebrada Paulista RP</title>
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet"><meta name="description" content="Documentos oficiais e cursos da PM da Quebrada Paulista Roleplay: RDPM, Regras Gerais e Cursos."><meta property="og:type" content="website"><meta property="og:site_name" content="Polícia Militar · Quebrada Paulista RP"><meta property="og:title" content="Polícia Militar · Quebrada Paulista RP"><meta property="og:description" content="Documentos oficiais e cursos da PM da Quebrada Paulista Roleplay: RDPM, Regras Gerais e Cursos."><meta property="og:url" content="https://pm-quebrada-paulista.vercel.app/"><meta property="og:image" content="https://pm-quebrada-paulista.vercel.app/og.jpg"><meta property="og:image:width" content="1400"><meta property="og:image:height" content="260"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#5b34c9">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Saira:wght@700;800;900&family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet"><meta name="description" content="Documentos oficiais e cursos da PM da Quebrada Paulista Roleplay: RDPM, Regras Gerais e Cursos."><meta property="og:type" content="website"><meta property="og:site_name" content="Polícia Militar · Quebrada Paulista RP"><meta property="og:title" content="Polícia Militar · Quebrada Paulista RP"><meta property="og:description" content="Documentos oficiais e cursos da PM da Quebrada Paulista Roleplay: RDPM, Regras Gerais e Cursos."><meta property="og:url" content="https://pm-quebrada-paulista.vercel.app/"><meta property="og:image" content="https://pm-quebrada-paulista.vercel.app/og.jpg"><meta property="og:image:width" content="1400"><meta property="og:image:height" content="260"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#0b1220">
 <style>
-:root{--bg:#f6f4fb;--fg:#1a1726;--mut:#5d5873;--line:#e2dcf0;--card:#fff;--ico:#efe9ff;--acc:#5b34c9;--red:#c8202f;--sombra:0 10px 30px rgba(60,30,140,.12);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root{--bg:#100e17;--fg:#eeecf5;--mut:#a6a2b9;--line:#2a2440;--card:#1a1626;--ico:#2a2140;--acc:#a78bfa;--red:#e03343;--sombra:0 10px 34px rgba(124,77,255,.18)}}
+:root{--bg:#0b1220;--fg:#eef1f7;--mut:#9aa5bb;--line:#222d44;--card:#121b2e;--ico:rgba(232,184,54,.12);--acc:#e8b836;--red:#c8202f;--sombra:0 14px 34px rgba(0,0,0,.45);color-scheme:dark;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 "Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
-.capa{width:100%;background:#141414;overflow:hidden}
-.capa img{display:block;width:100%;height:auto;min-height:140px;max-height:360px;object-fit:cover;object-position:left center}
-main{max-width:1080px;margin:0 auto;padding:44px 20px 56px}
+h1,h2,a.card b,.stat b{font-family:"Saira","Source Sans 3",system-ui,sans-serif}
+main{max-width:1080px;margin:0 auto;padding:56px 20px 56px}
 
-.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--card) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);box-shadow:0 6px 20px rgba(0,0,0,.18)}
-.nav .in{max-width:1080px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:18px;height:62px}
-.nav .marca{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--fg);font-weight:800;letter-spacing:.04em;white-space:nowrap}
-.nav .marca img{width:32px;height:32px}
-.nav .marca small{display:block;font-size:.7rem;font-weight:700;letter-spacing:.18em;color:var(--acc);line-height:1}
-.nav .marca span{line-height:1.15}
-.nav .links{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.topbar{background:#060a14;font-size:.72rem;font-weight:700;letter-spacing:.12em;text-transform:uppercase}
+.topbar .in{max-width:1080px;margin:0 auto;padding:6px 20px;display:flex;flex-wrap:wrap;justify-content:space-between;gap:4px 16px}
+.topbar .in>span:first-child{color:var(--acc)}
+.topbar .vig{display:inline-flex;align-items:center;gap:8px;color:#c4cbd9}
+.topbar .vig i{width:7px;height:7px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 3px rgba(34,197,94,.2)}
+
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:#fff;border-bottom:1px solid #e3e6ee;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.nav .in{max-width:1080px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:18px;height:68px}
+.nav .marca{display:flex;align-items:center;gap:10px;text-decoration:none;color:#0f1729;font-weight:800;white-space:nowrap}
+.nav .marca img{width:38px;height:38px}
+.nav .marca span{font-family:"Saira",sans-serif;font-size:1.02rem;line-height:1.1}
+.nav .marca small{display:block;font-family:"Source Sans 3",sans-serif;font-size:.68rem;font-weight:600;letter-spacing:.2em;color:#5b6478}
+.nav .links{display:flex;gap:2px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
 .nav .links::-webkit-scrollbar{display:none}
-.nav .links a{color:var(--mut);text-decoration:none;font-weight:600;font-size:.95rem;padding:7px 12px;border-radius:8px;white-space:nowrap;transition:color .15s,background .15s}
-.nav .links a:hover{color:var(--fg);background:var(--ico)}
-.nav .links a.ativo{color:var(--acc);background:var(--ico)}
-@media (max-width:640px){.nav .in{height:auto;padding:10px 16px;flex-wrap:wrap;gap:8px}.nav .links{margin-left:0;width:100%}.nav .links a{padding:6px 10px;font-size:.9rem}}
+.nav .links a{color:#2a3347;text-decoration:none;font-weight:600;font-size:.95rem;padding:7px 12px;border-radius:8px;white-space:nowrap;transition:color .15s,background .15s}
+.nav .links a:hover{background:#f1f3f7}
+.nav .links a.ativo{color:#9a7209;background:#fdf4da}
+.nav .cta{display:inline-flex;align-items:center;gap:8px;background:var(--red);color:#fff;text-decoration:none;font-weight:700;font-size:.95rem;padding:9px 16px;border-radius:8px;white-space:nowrap;transition:background .15s}
+.nav .cta:hover{background:#a8192a}
+.nav .cta svg{width:17px;height:17px}
+@media (max-width:640px){.nav .in{height:auto;padding:10px 16px;flex-wrap:wrap;gap:8px}.nav .cta{margin-left:auto;padding:7px 12px;font-size:.88rem}.nav .links{order:3;margin-left:0;width:100%}.nav .links a{padding:6px 10px;font-size:.9rem}}
+
+.hero{position:relative;overflow:hidden;background:#0b1220;border-bottom:1px solid var(--line)}
+.hero::before{content:"";position:absolute;inset:0;background:url(galeria/28.jpg) 60% 40%/cover;opacity:.2}
+.hero::after{content:"";position:absolute;inset:0;background:repeating-linear-gradient(135deg,rgba(255,255,255,.025) 0 2px,transparent 2px 14px),linear-gradient(90deg,#0b1220 22%,rgba(11,18,32,.8) 55%,rgba(120,18,32,.55))}
+.hero .selo{position:absolute;z-index:1;right:-70px;top:50%;width:460px;max-width:none;transform:translateY(-50%);opacity:.07;pointer-events:none}
+.hero .in{position:relative;z-index:2;max-width:1080px;margin:0 auto;padding:76px 20px 84px;display:grid;grid-template-columns:1.3fr 1fr;gap:44px;align-items:center}
+.pill{display:inline-flex;align-items:center;gap:8px;border:1px solid rgba(232,184,54,.45);color:var(--acc);border-radius:999px;padding:5px 14px;font-size:.74rem;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.pill svg{width:15px;height:15px}
+.hero h1{margin:22px 0 18px;font-size:clamp(2.3rem,5.4vw,3.8rem);font-weight:900;line-height:1.02}
+.hero h1 em{font-style:normal;color:var(--acc)}
+.lead{color:#c3cad9;font-size:1.12rem;max-width:520px;margin:0 0 30px}
+.btns{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 20px;border-radius:8px;font-weight:700;text-decoration:none;color:#fff;border:1px solid rgba(255,255,255,.22);transition:border-color .15s,background .15s}
+.btn:hover{border-color:var(--acc)}
+.btn.prim{background:var(--red);border-color:var(--red)}
+.btn.prim:hover{background:#a8192a;border-color:#a8192a}
+.btn svg{width:18px;height:18px}
+.stats{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.stat{background:rgba(18,27,46,.75);border:1px solid rgba(255,255,255,.1);border-radius:12px;padding:20px 18px;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+.stat svg{width:22px;height:22px;color:var(--acc)}
+.stat b{display:block;font-size:2.2rem;font-weight:800;line-height:1;margin:14px 0 8px}
+.stat span{display:block;font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:#aab3c6}
+@media (max-width:860px){.hero .in{grid-template-columns:1fr;padding:48px 20px 52px;gap:32px}.hero .selo{width:320px;right:-90px}}
+@media (max-width:640px){.stat{padding:16px 14px}.stat b{font-size:1.8rem}}
 .galeria{scroll-margin-top:90px}
 @media (max-width:640px){.galeria{scroll-margin-top:125px}}
 
-.topo{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin:0 0 28px}
+.topo{margin:0 0 28px}
 .kicker{display:block;color:var(--acc);font-size:.8rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
-h1{margin:2px 0 10px;font-size:clamp(1.7rem,4vw,2.3rem);font-weight:800;line-height:1.1}
+.topo h2{margin:2px 0 10px;font-size:clamp(1.5rem,3.4vw,2rem);font-weight:800;line-height:1.1}
 .faixa{display:flex;gap:6px}
 .faixa i{display:block;height:4px;border-radius:2px;background:var(--red);width:56px}
 .faixa i+i{background:var(--fg);width:14px}
@@ -97,26 +128,48 @@ a.card:hover .ir{transform:translateX(3px)}
 .lb .prox{right:14px;top:50%;transform:translateY(-50%)}
 @media (max-width:640px){.lb .palco{padding-left:12px;padding-right:12px}.lb .ant,.lb .prox{top:auto;bottom:calc(18px + env(safe-area-inset-bottom,0px));transform:none}}
 
-footer{border-top:1px solid var(--line);padding:26px 20px 34px;text-align:center;color:var(--mut);font-size:.88rem}
+footer{background:#060a14;border-top:1px solid var(--line);padding:26px 20px 34px;text-align:center;color:var(--mut);font-size:.88rem}
 footer .marca{display:inline-flex;align-items:center;gap:10px;font-weight:700;color:var(--fg);letter-spacing:.04em}
 footer img{width:34px;height:34px}
 footer p{margin:6px 0 0}
-</style></head><body><header class="capa"><img src="banner.jpg" alt="Quebrada Paulista Roleplay – Polícia Militar"></header>
+</style></head><body>
+<div class="topbar"><div class="in"><span>Quebrada Paulista Roleplay · Polícia Militar</span><span class="vig"><i></i>Vigência no WIPE 05/10 · atualizado em 03/10/2026</span></div></div>
 <nav class="nav"><div class="in">
-  <a class="marca" href="/"><img src="icon-512.png" alt=""><span><small>QUEBRADA PAULISTA</small>Polícia Militar</span></a>
+  <a class="marca" href="/"><img src="icon-512.png" alt=""><span>Polícia Militar<small>QUEBRADA PAULISTA</small></span></a>
   <div class="links">
     <a class="ativo" href="/">Início</a>
     <a href="/rdpm">RDPM</a>
     <a href="/regras-gerais">Regras Gerais</a>
-    <a href="/cursos">Cursos</a>
     <a href="#galeria">Galeria</a>
   </div>
+  <a class="cta" href="/cursos"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/></svg>Cursos</a>
 </div></nav>
+
+<section class="hero">
+  <img class="selo" src="icon-512.png" alt="">
+  <div class="in">
+    <div>
+      <span class="pill"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="m8 12 3 3 5-6"/></svg>Portal oficial da corporação</span>
+      <h1>Disciplina na farda,<br><em>honra</em> na missão.</h1>
+      <p class="lead">Regulamentos, cursos, fotos e vídeos da Polícia Militar da Quebrada Paulista Roleplay, reunidos em um só lugar.</p>
+      <div class="btns">
+        <a class="btn prim" href="/rdpm"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10M4 7h16M4 7l-2.5 6a3.5 3.5 0 0 0 5 0L4 7zm16 0-2.5 6a3.5 3.5 0 0 0 5 0L20 7z"/></svg>Ler o RDPM</a>
+        <a class="btn" href="/regras-gerais"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 10h6M9 14h6M9 18h3"/></svg>Regras Gerais</a>
+        <a class="btn" href="#galeria"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 8"/></svg>Ver galeria</a>
+      </div>
+    </div>
+    <div class="stats">
+      <div class="stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3H7a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V8z"/><path d="M14 3v5h5M9 13h6M9 17h6"/></svg><b>2</b><span>Documentos oficiais</span></div>
+      <div class="stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg><b>4</b><span>Cursos disponíveis</span></div>
+      <div class="stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="9" cy="10" r="2"/><path d="m21 16-5-5-9 8"/></svg><b id="nFotos">–</b><span>Fotos na galeria</span></div>
+      <div class="stat"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="2" y="6" width="14" height="12" rx="2"/><path d="m16 10 6-3v10l-6-3"/></svg><b id="nVideos">–</b><span>Vídeos de operação</span></div>
+    </div>
+  </div>
+</section>
 <main>
 
 <div class="topo">
-  <div><span class="kicker">Central da corporação</span><h1>Documentos oficiais</h1><div class="faixa"><i></i><i></i></div></div>
-  <span class="status"><span class="dot"></span>Vigência no WIPE 05/10 · atualizado em 03/10/2026</span>
+  <span class="kicker">Central da corporação</span><h2>Documentos oficiais</h2><div class="faixa"><i></i><i></i></div>
 </div>
 
 <div class="grade">
@@ -262,6 +315,8 @@ const lb = document.getElementById("lb"), lbImg = document.getElementById("lbImg
 let atual = 0;
 
 document.getElementById("qtd").textContent = FOTOS.length + " fotos";
+document.getElementById("nFotos").textContent = FOTOS.length;
+document.getElementById("nVideos").textContent = VIDEOS.length;
 FOTOS.forEach(([n, legenda], i) => {
   const b = document.createElement("button");
   b.type = "button";
