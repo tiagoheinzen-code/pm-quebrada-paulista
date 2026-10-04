@@ -13,6 +13,20 @@ body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 "Source Sans 3"
 .capa img{display:block;width:100%;height:auto;min-height:140px;max-height:360px;object-fit:cover;object-position:left center}
 main{max-width:1080px;margin:0 auto;padding:44px 20px 56px}
 
+.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:10;background:color-mix(in srgb,var(--card) 88%,transparent);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px);border-bottom:1px solid var(--line);box-shadow:0 6px 20px rgba(0,0,0,.18)}
+.nav .in{max-width:1080px;margin:0 auto;padding:0 20px;display:flex;align-items:center;gap:18px;height:62px}
+.nav .marca{display:flex;align-items:center;gap:10px;text-decoration:none;color:var(--fg);font-weight:800;letter-spacing:.04em;white-space:nowrap}
+.nav .marca img{width:32px;height:32px}
+.nav .marca small{display:block;font-size:.7rem;font-weight:700;letter-spacing:.18em;color:var(--acc);line-height:1}
+.nav .marca span{line-height:1.15}
+.nav .links{display:flex;gap:4px;margin-left:auto;overflow-x:auto;scrollbar-width:none}
+.nav .links::-webkit-scrollbar{display:none}
+.nav .links a{color:var(--mut);text-decoration:none;font-weight:600;font-size:.95rem;padding:7px 12px;border-radius:8px;white-space:nowrap;transition:color .15s,background .15s}
+.nav .links a:hover{color:var(--fg);background:var(--ico)}
+.nav .links a.ativo{color:var(--acc);background:var(--ico)}
+@media (max-width:640px){.nav .in{height:auto;padding:10px 16px;flex-wrap:wrap;gap:8px}.nav .links{margin-left:0;width:100%}.nav .links a{padding:6px 10px;font-size:.9rem}}
+.galeria{scroll-margin-top:90px}
+
 .topo{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin:0 0 28px}
 .kicker{display:block;color:var(--acc);font-size:.8rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
 h1{margin:2px 0 10px;font-size:clamp(1.7rem,4vw,2.3rem);font-weight:800;line-height:1.1}
@@ -57,7 +71,18 @@ footer{border-top:1px solid var(--line);padding:26px 20px 34px;text-align:center
 footer .marca{display:inline-flex;align-items:center;gap:10px;font-weight:700;color:var(--fg);letter-spacing:.04em}
 footer img{width:34px;height:34px}
 footer p{margin:6px 0 0}
-</style></head><body><header class="capa"><img src="banner.jpg" alt="Quebrada Paulista Roleplay – Polícia Militar"></header><main>
+</style></head><body><header class="capa"><img src="banner.jpg" alt="Quebrada Paulista Roleplay – Polícia Militar"></header>
+<nav class="nav"><div class="in">
+  <a class="marca" href="/"><img src="icon-512.png" alt=""><span><small>QUEBRADA PAULISTA</small>Polícia Militar</span></a>
+  <div class="links">
+    <a class="ativo" href="/">Início</a>
+    <a href="/rdpm">RDPM</a>
+    <a href="/regras-gerais">Regras Gerais</a>
+    <a href="/cursos">Cursos</a>
+    <a href="#galeria">Galeria</a>
+  </div>
+</div></nav>
+<main>
 
 <div class="topo">
   <div><span class="kicker">Central da corporação</span><h1>Documentos oficiais</h1><div class="faixa"><i></i><i></i></div></div>
@@ -93,7 +118,7 @@ footer p{margin:6px 0 0}
 
 <div class="aviso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><span><strong>Dúvidas?</strong> Assuntos administrativos e contatos com o QCG, a Corregedoria e os comandos são tratados por ticket.</span></div>
 
-<section class="galeria">
+<section class="galeria" id="galeria">
   <span class="kicker">Galeria</span>
   <h2>A corporação em ação</h2>
   <div class="faixa"><i></i><i></i></div>
