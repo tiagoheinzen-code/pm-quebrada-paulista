@@ -415,17 +415,17 @@ html[data-tema="claro"] .nav .marca small{color:var(--acc)}
 html[data-tema="claro"] .nav .links a{color:#3a3f4f}
 html[data-tema="claro"] .nav .links a:hover,html[data-tema="claro"] .nav .links a.ativo{color:#000}
 html[data-tema="claro"] .nav .links a::after{background:var(--red)}
-html[data-tema="claro"] .hero::after{background:linear-gradient(0deg,var(--bg) 0%,rgba(244,245,249,.9) 34%,rgba(244,245,249,.45) 70%,rgba(244,245,249,.55) 100%),linear-gradient(90deg,rgba(244,245,249,.88),transparent 72%)}
-html[data-tema="claro"] .rotulo,html[data-tema="claro"] .hero .kicker,html[data-tema="claro"] .cod{color:#2a2f3d}
-html[data-tema="claro"] .rotulo .bandeira i:nth-child(2),html[data-tema="claro"] .hero .bandeira i:nth-child(2),html[data-tema="claro"] .band i:nth-child(2){outline:1px solid #b9bdc9}
-html[data-tema="claro"] .rotulo .bandeira i:nth-child(3),html[data-tema="claro"] .hero .bandeira i:nth-child(3),html[data-tema="claro"] .band i:nth-child(3){outline:0}
-html[data-tema="claro"] .hero h1 span{color:var(--acc)}
-html[data-tema="claro"] .lead,html[data-tema="claro"] .sub,html[data-tema="claro"] .hero p{color:#3a3f4f}
-html[data-tema="claro"] .btn{color:#14161f;background:rgba(255,255,255,.75);border-color:#c9cdd8}
-html[data-tema="claro"] .btn:hover{background:#fff}
+html[data-tema="claro"] .hero::after{background:linear-gradient(0deg,rgba(14,12,22,.88) 0%,rgba(14,12,22,.62) 38%,rgba(14,12,22,.28) 75%,rgba(14,12,22,.45) 100%),linear-gradient(90deg,rgba(14,12,22,.72),transparent 70%)}
+html[data-tema="claro"] .rotulo,html[data-tema="claro"] .hero .kicker,html[data-tema="claro"] .cod{color:#e9e7f2}
+html[data-tema="claro"] .rotulo .bandeira i:nth-child(2),html[data-tema="claro"] .hero .bandeira i:nth-child(2),html[data-tema="claro"] .band i:nth-child(2){outline:0}
+html[data-tema="claro"] .rotulo .bandeira i:nth-child(3),html[data-tema="claro"] .hero .bandeira i:nth-child(3),html[data-tema="claro"] .band i:nth-child(3){outline:1px solid rgba(255,255,255,.3)}
+html[data-tema="claro"] .hero h1 span{color:#f2c230}
+html[data-tema="claro"] .lead,html[data-tema="claro"] .sub,html[data-tema="claro"] .hero p{color:#e2e0ea}
+html[data-tema="claro"] .btn{color:#fff;background:rgba(255,255,255,.1);border-color:rgba(255,255,255,.3)}
+html[data-tema="claro"] .btn:hover{background:rgba(255,255,255,.2)}
 html[data-tema="claro"] .btn.prim{color:#fff;background:var(--acc);border-color:var(--acc)}
 html[data-tema="claro"] .btn.prim:hover{background:#262c7d}
-html[data-tema="claro"] .pontos button{background:rgba(20,22,31,.25)}
+html[data-tema="claro"] .pontos button{background:rgba(255,255,255,.4)}
 html[data-tema="claro"] .pontos button.on{background:var(--red)}
 html[data-tema="claro"] .num b{color:var(--acc)}
 html[data-tema="claro"] .faixa i+i{background:#14161f}
@@ -438,14 +438,14 @@ html[data-tema="claro"] .mais:hover{background:var(--acc);color:#fff}
 html[data-tema="claro"] .mosaico button{background:#dfe2ea}
 html[data-tema="claro"] .card{border-left-color:var(--acc)}
 html[data-tema="claro"] .card b{color:#14161f}
-html[data-tema="claro"] .voltar,html[data-tema="claro"] .hero .voltar{color:var(--acc)}
+html[data-tema="claro"] .voltar{color:var(--acc)}html[data-tema="claro"] .hero .voltar{color:#c9ccff}
 html[data-tema="claro"] footer{background:#e9ebf2}
-html[data-tema="claro"] .hero .titulo{color:#14161f}
+html[data-tema="claro"] .hero .titulo{color:#fff}
 html[data-tema="claro"] .qp-barra.qp-nav{background:rgba(255,255,255,.95)}
 html[data-tema="claro"] main h1,html[data-tema="claro"] main h2,html[data-tema="claro"] main strong,html[data-tema="claro"] th{color:#14161f}
 html[data-tema="claro"] main h2{border-left-color:var(--red)}
 html[data-tema="claro"] main h3,html[data-tema="claro"] main a{color:var(--acc)}
 html[data-tema="claro"] #sumario a.ativo{color:var(--acc)}
 html[data-tema="claro"] #sumario-btn,html[data-tema="claro"] .qp-toast{background:var(--acc);color:#fff}
-html[data-tema="claro"] .hero h1{color:#14161f}
+html[data-tema="claro"] .hero h1{color:#fff}
 </style><script id="qp-tema-js">(function(){var b=document.getElementById("tema-btn");if(!b)return;var h=document.documentElement,m=document.querySelector('meta[name="theme-color"]');function upd(){var c=h.dataset.tema==="claro";b.title=c?"Mudar para o tema escuro":"Mudar para o tema claro";b.setAttribute("aria-pressed",c?"true":"false");if(m)m.content=c?"#f4f5f9":"#0e0c16";}b.addEventListener("click",function(){if(h.dataset.tema==="claro")delete h.dataset.tema;else h.dataset.tema="claro";try{localStorage.setItem("qp-tema",h.dataset.tema||"escuro")}catch(e){}upd();});upd();})();</script></body></html>
