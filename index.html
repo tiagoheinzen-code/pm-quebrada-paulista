@@ -3,24 +3,84 @@
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Polícia Militar · Quebrada Paulista RP</title>
 <link rel="icon" href="/favicon.ico" sizes="any"><link rel="icon" type="image/png" sizes="32x32" href="/favicon-32.png"><link rel="apple-touch-icon" href="/apple-touch-icon.png">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet"><meta name="description" content="Documentos oficiais da PM da Quebrada Paulista Roleplay: RDPM e Regras Gerais."><meta property="og:type" content="website"><meta property="og:site_name" content="Polícia Militar · Quebrada Paulista RP"><meta property="og:title" content="Polícia Militar · Quebrada Paulista RP"><meta property="og:description" content="Documentos oficiais da PM da Quebrada Paulista Roleplay: RDPM e Regras Gerais."><meta property="og:url" content="https://pm-quebrada-paulista.vercel.app/"><meta property="og:image" content="https://pm-quebrada-paulista.vercel.app/og.jpg"><meta property="og:image:width" content="1400"><meta property="og:image:height" content="260"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#5b34c9">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700;800&display=swap" rel="stylesheet"><meta name="description" content="Documentos oficiais e cursos da PM da Quebrada Paulista Roleplay: RDPM, Regras Gerais e Cursos."><meta property="og:type" content="website"><meta property="og:site_name" content="Polícia Militar · Quebrada Paulista RP"><meta property="og:title" content="Polícia Militar · Quebrada Paulista RP"><meta property="og:description" content="Documentos oficiais e cursos da PM da Quebrada Paulista Roleplay: RDPM, Regras Gerais e Cursos."><meta property="og:url" content="https://pm-quebrada-paulista.vercel.app/"><meta property="og:image" content="https://pm-quebrada-paulista.vercel.app/og.jpg"><meta property="og:image:width" content="1400"><meta property="og:image:height" content="260"><meta name="twitter:card" content="summary_large_image"><meta name="theme-color" content="#5b34c9">
 <style>
-:root{--bg:#fff;--fg:#1a1a1a;--mut:#555;--line:#ddd8ea;--card:#f7f5fc;--acc:#5b34c9;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-@media (prefers-color-scheme:dark){:root{--bg:#14121b;--fg:#ececf1;--mut:#a9a6b8;--line:#2f2a42;--card:#1d1928;--acc:#a78bfa}}
+:root{--bg:#f6f4fb;--fg:#1a1726;--mut:#5d5873;--line:#e2dcf0;--card:#fff;--ico:#efe9ff;--acc:#5b34c9;--red:#c8202f;--sombra:0 10px 30px rgba(60,30,140,.12);box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root{--bg:#100e17;--fg:#eeecf5;--mut:#a6a2b9;--line:#2a2440;--card:#1a1626;--ico:#2a2140;--acc:#a78bfa;--red:#e03343;--sombra:0 10px 34px rgba(124,77,255,.18)}}
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:17px/1.6 "Source Sans 3",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
 .capa{width:100%;background:#141414;overflow:hidden}
 .capa img{display:block;width:100%;height:auto;min-height:140px;max-height:360px;object-fit:cover;object-position:left center}
-main{max-width:720px;margin:0 auto;padding:36px 18px 64px}
-.sub{color:var(--mut);text-align:center;margin:0 0 26px;font-size:.95rem;letter-spacing:.04em;text-transform:uppercase}
-a.card{display:block;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);border-left:5px solid var(--acc);border-radius:10px;padding:16px 18px;margin:0 0 14px;transition:transform .12s,border-color .12s}
-a.card:hover{border-color:var(--acc);transform:translateY(-1px)}
-a.card b{color:var(--acc);font-size:1.15rem;font-weight:700}
-a.card .d{display:block;color:var(--mut);font-size:.95rem}
-a.card .v{display:inline-block;margin-top:8px;font-size:.8rem;font-weight:600;color:var(--acc);border:1px solid var(--line);border-radius:999px;padding:1px 10px}
+main{max-width:1080px;margin:0 auto;padding:44px 20px 56px}
+
+.topo{display:flex;flex-wrap:wrap;align-items:flex-end;justify-content:space-between;gap:16px;margin:0 0 28px}
+.kicker{display:block;color:var(--acc);font-size:.8rem;font-weight:700;letter-spacing:.22em;text-transform:uppercase}
+h1{margin:2px 0 10px;font-size:clamp(1.7rem,4vw,2.3rem);font-weight:800;line-height:1.1}
+.faixa{display:flex;gap:6px}
+.faixa i{display:block;height:4px;border-radius:2px;background:var(--red);width:56px}
+.faixa i+i{background:var(--fg);width:14px}
+.status{display:inline-flex;align-items:center;gap:8px;font-size:.88rem;font-weight:600;color:var(--mut);background:var(--card);border:1px solid var(--line);border-radius:999px;padding:6px 14px}
+.status .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;box-shadow:0 0 0 4px rgba(34,197,94,.18)}
+
+.grade{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(270px,100%),1fr));gap:20px}
+a.card{position:relative;display:flex;flex-direction:column;text-decoration:none;color:var(--fg);background:var(--card);border:1px solid var(--line);border-radius:16px;padding:24px 22px 20px;overflow:hidden;transition:transform .15s,border-color .15s,box-shadow .15s}
+a.card::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:linear-gradient(90deg,var(--acc),transparent)}
+a.card:hover{transform:translateY(-3px);border-color:var(--acc);box-shadow:var(--sombra)}
+a.card:focus-visible{outline:3px solid var(--acc);outline-offset:3px}
+.ico{display:grid;place-items:center;width:48px;height:48px;border-radius:12px;background:var(--ico);color:var(--acc);margin:0 0 16px}
+.ico svg{width:26px;height:26px}
+.tag{font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--mut)}
+a.card b{display:block;font-size:1.22rem;font-weight:800;line-height:1.25;margin:4px 0 8px}
+.d{color:var(--mut);font-size:.96rem;margin:0 0 20px}
+.rodape{display:flex;align-items:center;gap:10px;margin-top:auto;padding-top:14px;border-top:1px solid var(--line)}
+.v{font-size:.78rem;font-weight:600;color:var(--acc);border:1px solid var(--line);border-radius:999px;padding:2px 10px}
+.ir{margin-left:auto;font-weight:700;font-size:.92rem;color:var(--acc);white-space:nowrap;transition:transform .15s}
+a.card:hover .ir{transform:translateX(3px)}
+
+.aviso{display:flex;align-items:center;gap:14px;margin:28px 0 0;padding:16px 20px;background:var(--card);border:1px solid var(--line);border-left:4px solid var(--red);border-radius:12px;color:var(--mut);font-size:.95rem}
+.aviso svg{flex:none;width:22px;height:22px;color:var(--red)}
+.aviso strong{color:var(--fg)}
+
+footer{border-top:1px solid var(--line);padding:26px 20px 34px;text-align:center;color:var(--mut);font-size:.88rem}
+footer .marca{display:inline-flex;align-items:center;gap:10px;font-weight:700;color:var(--fg);letter-spacing:.04em}
+footer img{width:34px;height:34px}
+footer p{margin:6px 0 0}
 </style></head><body><header class="capa"><img src="banner.jpg" alt="Quebrada Paulista Roleplay – Polícia Militar"></header><main>
-<p class="sub">Documentos oficiais da corporação · atualizado em 03/10/2026</p>
-<a class="card" href="/rdpm"><b>Regulamento Disciplinar da PM (RDPM)</b><span class="d">Transgressões, sanções, julgamento, recursos e inatividade</span><span class="v">Minuta v1.14 · vigência no WIPE 05/10</span></a>
-<a class="card" href="/regras-gerais"><b>Regras Gerais da PM</b><span class="d">Cursos, ingresso, transferências, promoções e rotina operacional</span><span class="v">Minuta v1.0 · vigência no WIPE 05/10</span></a>
-<a class="card" href="/cursos"><b>Cursos da PM</b><span class="d">Tiro, abordagem e demais cursos da corporação</span><span class="v">Apresentações no Canva</span></a>
-</main></body></html>
+
+<div class="topo">
+  <div><span class="kicker">Central da corporação</span><h1>Documentos oficiais</h1><div class="faixa"><i></i><i></i></div></div>
+  <span class="status"><span class="dot"></span>Vigência no WIPE 05/10 · atualizado em 03/10/2026</span>
+</div>
+
+<div class="grade">
+  <a class="card" href="/rdpm">
+    <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v18M7 21h10M4 7h16M4 7l-2.5 6a3.5 3.5 0 0 0 5 0L4 7zm16 0-2.5 6a3.5 3.5 0 0 0 5 0L20 7z"/></svg></span>
+    <span class="tag">Disciplina</span>
+    <b>Regulamento Disciplinar da PM (RDPM)</b>
+    <span class="d">Transgressões, sanções, julgamento, recursos e inatividade</span>
+    <span class="rodape"><span class="v">Minuta v1.14</span><span class="ir">Abrir →</span></span>
+  </a>
+  <a class="card" href="/regras-gerais">
+    <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="5" y="4" width="14" height="17" rx="2"/><path d="M9 4V3h6v1M9 10h6M9 14h6M9 18h3"/></svg></span>
+    <span class="tag">Normas</span>
+    <b>Regras Gerais da PM</b>
+    <span class="d">Cursos, ingresso, transferências, promoções e rotina operacional</span>
+    <span class="rodape"><span class="v">Minuta v1.0</span><span class="ir">Abrir →</span></span>
+  </a>
+  <a class="card" href="/cursos">
+    <span class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="8"/><circle cx="12" cy="12" r="3"/><path d="M12 2v4M12 18v4M2 12h4M18 12h4"/></svg></span>
+    <span class="tag">Formação</span>
+    <b>Cursos da PM</b>
+    <span class="d">Tiro, abordagem, direção policial e demais cursos da corporação</span>
+    <span class="rodape"><span class="v">Apresentações no Canva</span><span class="ir">Abrir →</span></span>
+  </a>
+</div>
+
+<div class="aviso"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg><span><strong>Dúvidas?</strong> Assuntos administrativos e contatos com o QCG, a Corregedoria e os comandos são tratados por ticket.</span></div>
+
+</main>
+<footer>
+  <span class="marca"><img src="icon-512.png" alt="">Quebrada Paulista Roleplay · Polícia Militar</span>
+  <p>Documentos oficiais da corporação</p>
+</footer>
+</body></html>
