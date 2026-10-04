@@ -3,4 +3,5 @@
 # Na pasta videos, só os arquivos convertidos (video-NN.mp4) vão para o site
 videos/*
 !videos/video-*.mp4
+!videos/video-*.jpg
 !videos/LEIA-ME.md

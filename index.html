@@ -116,7 +116,11 @@ a.card:hover .ir{transform:translateX(3px)}
 .vgrade{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(420px,100%),1fr));gap:18px;margin-top:22px}
 .vgrade figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
 .vgrade video{display:block;width:100%;aspect-ratio:16/9;object-fit:contain;background:#000}
-.vgrade figcaption{padding:12px 16px;font-weight:600;font-size:.95rem}
+.vgrade figcaption,.vcurtos figcaption{padding:12px 16px;font-weight:600;font-size:.95rem}
+.vcurtos{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(230px,100%),1fr));gap:18px;margin-top:18px}
+.vcurtos figure{margin:0;background:var(--card);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.vcurtos video{display:block;width:100%;aspect-ratio:9/16;object-fit:cover;background:#000}
+@media (max-width:640px){.vcurtos{grid-template-columns:1fr 1fr;gap:10px}.vcurtos figcaption{padding:8px 10px;font-size:.85rem}}
 @media (max-width:640px){.videos{scroll-margin-top:125px}}
 
 .lb{width:100vw;height:100vh;max-width:none;max-height:none;margin:0;padding:0;border:0;background:rgba(8,6,14,.94);color:#fff}
@@ -208,6 +212,7 @@ footer p{margin:6px 0 0}
   <h2>Em operação</h2>
   <div class="faixa"><i></i><i></i></div>
   <div class="vgrade" id="vgrade"></div>
+  <div class="vcurtos" id="vcurtos" hidden></div>
 </section>
 
 <dialog class="lb" id="lb" aria-label="Foto ampliada">
@@ -283,21 +288,26 @@ const FOTOS = [
 // ===== VÍDEOS: coloque o .mp4 na pasta videos/ e acrescente uma linha aqui. Com a lista vazia, a seção fica escondida. =====
 const VIDEOS = [
   ["video-01.mp4", "Assalto na loja de armas"],
-  ["video-02.mp4", "Operação padrão. O morro não perdoa. 👮‍♂️💀"],
   ["video-03.mp4", "CAvPM GRAU 🤝 SAMU"],
+  // vídeos em pé (celular): acrescente "vertical" no fim da linha
+  ["video-02.mp4", "Operação padrão. O morro não perdoa. 👮‍♂️💀", "vertical"],
+  ["video-04.mp4", "Assalto na loja de armas · Parte 2", "vertical"],
+  ["video-05.mp4", "Assalto na loja de armas · Parte 3", "vertical"],
 ];
 // ===== FIM =====
 
 if (VIDEOS.length) {
-  const vgrade = document.getElementById("vgrade");
-  for (const [arquivo, titulo] of VIDEOS) {
+  const vgrade = document.getElementById("vgrade"), vcurtos = document.getElementById("vcurtos");
+  for (const [arquivo, titulo, formato] of VIDEOS) {
     const fig = document.createElement("figure");
     const v = document.createElement("video");
-    v.src = "videos/" + arquivo + "#t=0.1"; v.controls = true; v.preload = "metadata"; v.playsInline = true;
+    v.src = "videos/" + arquivo; v.poster = "videos/" + arquivo.replace(/\.mp4$/, ".jpg");
+    v.controls = true; v.preload = "none"; v.playsInline = true;
     const cap = document.createElement("figcaption"); cap.textContent = titulo;
     fig.append(v, cap);
-    vgrade.appendChild(fig);
+    (formato === "vertical" ? vcurtos : vgrade).appendChild(fig);
   }
+  vcurtos.hidden = !vcurtos.children.length;
   document.getElementById("videos").hidden = false;
 }
 
